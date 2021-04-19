@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/5a6a5aaf7a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/style.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+    <div class="container">
+
+        <form id="city-form">
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="Search city" aria-describedby="button-addon2"
+                    id="city-search">
+                <button class="btn btn-outline-secondary" type="button" id="button-addon2">Find</button>
+            </div>
+            
+        </form>
+        <form>
+            <div class="row">
+                <div class="col-sm-6">
+                    <h1 id="city-display">Poznan</h1>
+                </div>
+            
+                <div class="col-sm-6">
+                    <form id="temp-display">
+                        <h1><i class="fas fa-cloud-meatball"></i>
+                            <span class="temp" id="temp">19</span>
+                            <span class="units">
+                                <span>
+                                    <a href="#" id="temp-link-C">
+                                        ºC
+                                    </a>
+                                </span>
+                                <span>
+                                    |
+                                </span>
+                                <span>
+                                    <a href="#" id="temp-link-F">
+                                        ºF
+                                    </a>
+                                </span>
+                            </span>
+                        </h1>
+                    </form>
+
+                </div>
+            </div>
+        </form>
+        <form>
+            <p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <ul class="additional-info">
+                        <li id="humidity">Humidity</li>
+                        <li id="pressure">Pressure</li>
+                        <li id="wind">Wind</li>
+                    </ul>
+                </div>
+                <div class="col-sm-6">
+                    <h3>
+                        <div class="day" id="current-time">Sunday 16:00</div>
+                    </h3>
+                    <ul class="day-night">
+                        <li>Sunrise <span id="sunrise"></span></li>
+                        <li>Sunset <span id="sunset"></span></li>
+                    </ul>
+                </div>
+
+                </p>
+        </form>
+        <hr class="line"/>
+        <p class="next-days">
+
+        <div class="col-sm-2">
+            <div>Mon, 22</div>
+            <i class="fas fa-sun"></i> <span>8ºC</span>
+        </div>
+
+        <div class="col-sm-2">
+            <div>Tue, 23</div>
+            <i class="fas fa-cloud-sun"></i> <span>6ºC</span>
+        </div>
+
+        <div class="col-sm-2">
+            <div>Wed, 24</div>
+            <i class="fas fa-cloud-sun-rain"></i> <span>3ºC</span>
+        </div>
+
+        <div class="col-sm-2">
+            <div>Thur, 25</div>
+            <i class="fas fa-cloud-meatball"></i> <span>0ºC</span>
+        </div>
+
+        <div class="col-sm-2">
+            <div>Fri, 26</div>
+            <i class="fas fa-cloud-meatball"></i> <span>-3ºC</span>
+        </div>
+
+        </p>
+        </form>
+        <footer>
+            Coded by Marta Ostrowska
+        </footer>
+</div>
+<script src="src/app.js"> </script>
+</body>
+
+</html>
